@@ -57,29 +57,34 @@ src/
 Create `.env.local`:
 
 ```bash
+# App
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
 # Clerk Authentication
-CLERK_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test
+CLERK_SECRET_KEY=sk_test_
+CLERK_WEBHOOK_SECRET=whsec_
+
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
 # MongoDB
 MONGODB_URI=mongodb+srv://...
 
 # Stripe
-STRIPE_SECRET_KEY=sk_test_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
+STRIPE_WEBHOOK_SECRET=whsec_
+STRIPE_SECRET_KEY=sk_test
 
-# Cloudinary (for course thumbnails)
-# Get these from https://cloudinary.com/console
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
-NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=course_thumbnails
 
-# App
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+# Cloudinary
+CLOUDINARY_CLOUD_NAME=cloud_name
+CLOUDINARY_API_KEY=api_key
+CLOUDINARY_API_SECRET=api_secrect
+CLOUDINARY_UPLOAD_PRESET=course_thumbnails
+
+
 ```
 
 ### 2. Install Dependencies
@@ -116,13 +121,6 @@ To grant admin access to a user:
 Now you can access the admin dashboard at `/admin`
 
 ## 📖 Documentation
-
-Detailed guides are available:
-
-- **[Performance Fixes](PERFORMANCE_FIXES.md)** - All optimizations and caching strategies
-- **[Subscription Model](SUBSCRIPTION_MODEL.md)** - How the all-access pricing works
-- **[Cloudinary Setup](CLOUDINARY_SETUP.md)** - How to configure Cloudinary for image uploads
-- **[Course Player Guide](COURSE_PLAYER_GUIDE.md)** - Course player implementation
 
 ## 🎯 Routes
 

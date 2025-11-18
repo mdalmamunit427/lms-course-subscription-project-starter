@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "./custom_styles.css";
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Brand Colors */
+  --color-brand-primary: #f71345;
+  --color-brand-secondary: #28babc;
+  --color-brand-tertiary: #00a294;
+  
+  /* Neutral Colors */
+  --color-neutral-white: white;
+  --color-neutral-black: #000;
+  
+  /* System Colors */
+  --color-success: #cef5ca;
+  --color-warning: #fcf8d8;
+  --color-error: #3b0b0b;
+  
+  /* Font Families */
+  --font-sans: Gilroy, sans-serif;
+  --font-display: "Hand Of Sean Pro", sans-serif;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-2xl: 1920px;
+  
+  /* Container Sizes */
+  --container-content: 63rem;        /* 1008px - was 935 */
+  --container-content-wide: 65rem;   /* 1040px - was 943 */
+  --container-narrow: 38.625rem;     /* 618px */
+  --container-large: 70.5rem;        /* 1128px */
+  --container-xlarge: 80rem;         /* 1280px */
+  --container-medium: 49.0625rem;    /* 785px */
+  
+  /* Spacing Scale */
+  --spacing-xxs: 1rem;      /* 16px */
+  --spacing-xs: 1.55rem;    /* 24px */
+  --spacing-sm: 2rem;       /* 32px */
+  --spacing-md: 2.5rem;     /* 40px/48px */
+  --spacing-lg: 3.5rem;     /* 56px/62px */
+  --spacing-xl: 5rem;       /* 80px */
+  --spacing-xxl: 6.9375rem; /* 111px */
+  
+  /* Typography Scale */
+  --text-xs: 0.75rem;       /* 12px */
+  --text-sm: 0.875rem;      /* 14px */
+  --text-base: 1.125rem;    /* 18px */
+  --text-md: 1.1875rem;     /* 19-21px */
+  --text-lg: 1.5rem;        /* 24px */
+  --text-xl: 2rem;          /* 32px */
+  
+  /* Heading Scale */
+  --heading-md: 1.5rem;     /* 24px */
+  --heading-lg: 3rem;       /* 48px - was 45 */
+  --heading-xl: 3.5rem;     /* 56px */
+  --heading-xxl: 4.5rem;    /* 72px */
+  
+  /* Gap Scale */
+  --gap-sm: 0.75rem;        /* 12px */
+  --gap-md: 1.375rem;       /* 22px */
+  --gap-lg: 2.5rem;         /* 40px */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-neutral-black);
+  background: white;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
